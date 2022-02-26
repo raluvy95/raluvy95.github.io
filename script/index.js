@@ -29,6 +29,12 @@ const data = {
             username: "therealraluvy95",
             description: "Where I collect memes and maybe I will post there",
             url: "https://reddit.com/therealraluvy95"
+        },
+        {
+            name: "TikTok",
+            username: "catnowblue.ro",
+            description: "The newest social media, tho I post short video there",
+            url: "https://www.tiktok.com/@catnowblue.ro"
         }
     ],
     leastActive: [
