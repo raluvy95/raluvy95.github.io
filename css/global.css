@@ -13,3 +13,7 @@ html {
     background-color: var(--bg);
     color: var(--white);
 }
+
+body {
+    font-family: sans-serif;
+}
