@@ -55,6 +55,12 @@ const data = {
             username: "catnowblue",
             description: "Not interesed in streaming yet...",
             url: "https://twitch.tv/catnowblue"
+        },
+        {
+            name: "Revolt",
+            username: "catnowblue.ro",
+            description: "Might migrate to this platform if Discord ruined my account again. (Coming Soon)",
+            url: "none"
         }
     ]
 }
@@ -79,5 +85,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
 function clicker(el) {
     const URL = el.getAttribute("url")
-    window.open(URL, "_blank")
+    if(URL == "none") return;
+    window.open(URL, "_blank");
 }
