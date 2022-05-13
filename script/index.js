@@ -28,7 +28,7 @@ const data = {
             name: "Reddit",
             username: "therealraluvy95",
             description: "Where I collect memes and maybe I will post there",
-            url: "https://reddit.com/therealraluvy95"
+            url: "https://reddit.com/u/therealraluvy95"
         },
         {
             name: "TikTok",
