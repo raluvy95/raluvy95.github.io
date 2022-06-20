@@ -1,111 +1,255 @@
-@import url(global.css);
+@font-face {
+  font-family: BOLD;
+  src: url(../assets/THEBOLDFONT.ttf);
+}
+:root {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1E1E2E;
+  color: #C3BAC6;
+  accent-color: #96CDFB;
+}
 
 body {
-    position: absolute;
-    left: 25%;
-}
-
-.fixed {
-    background: url(../wallpaper.gif) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;;
-    position: fixed;
-    top: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    left: 1px;
-    opacity: 50%;
-}
-
-.title {
-    font-size: 8vw;
-    animation: floating infinite 5s cubic-bezier(0.68, 0.27, 0.27, 0.91);
-    transition: all 0.5s;
-    cursor: pointer;
-}
-
-.title:hover {
-    color: var(--accent1);
-}
-
-@keyframes floating {
-    0% {
-        transform: translateY(-15px);
-    }
-
-    50% {
-        transform: translateY(15px);
-    }
-
-    100% {
-        transform: translateY(-15px);
-    }
-}
-
-.list {
-    font-size: small;
-    display: inline;
-    list-style: none;
-}
-
-.item {
-    background-color: var(--bg1);
-    text-align: center;
-    border-radius: 10px;
-    padding: 5px;
-    margin: 10px;
-    transition: all 0.3s;
-    opacity: 75%;
-}
-
-
-
-.item:hover {
-    background-color: var(--accent);
-    cursor: pointer;
-    box-shadow: 0px 2px 5px black;
-}
-
-.username {
-    color: var(--white1);
+  /* I wish web browsers will follow this rule*/
+  margin: 0;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
-    display: block;
-    position: relative;
-    padding: 0.2em 0;
+  text-decoration: none;
+  color: #DDB6F2;
+}
+a :hover {
+  font-weight: bold;
+  color: #96CDFB;
 }
 
-a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0.1em;
-    background-color: var(--accent);
-    opacity: 0;
-    transition: opacity 300ms, transform 300ms;
+.header {
+  background-color: #1A1826;
+  background-clip: border-box;
+  padding: 5px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  font-size: 16px;
+  transition: padding 0.8s;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+.header .title {
+  transition: 0.6s;
+  font-weight: bold;
+  color: #D9E0EE;
+  font-family: BOLD;
+}
+.header .icon::before {
+  content: url(../assets/icon.svg);
+  padding: 0 8px;
+}
+.header .icon {
+  padding: 6px;
+}
+.header :hover {
+  color: #96CDFB;
+}
+.header .menu .cols {
+  padding: 0 3px;
 }
 
-a:hover::after,
-a:focus::after {
-    opacity: 1;
-    transform: translate3d(0, 5px, 0);
+.notsoprofessional {
+  background-image: linear-gradient(#96CDFB, #1E1E2E);
+  padding: 140px 100px;
+}
+.notsoprofessional .text {
+  color: #C9CBFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 32px;
+}
+.notsoprofessional .text .typing {
+  font-weight: bold;
+  color: #96CDFB;
+  border-right: 0.05em solid;
+  -webkit-animation: caret 1s steps(1) infinite;
+          animation: caret 1s steps(1) infinite;
 }
 
-a::after {
-    opacity: 1;
-    transform: scale(0);
-    transform-origin: center;
+.about {
+  background-color: #575268;
+  padding: 100px 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.about .kitty::before {
+  content: url(../assets/cat.svg);
+}
+.about .kitty {
+  height: 20px;
+  padding-bottom: 250px;
+  padding-right: 80px;
+}
+.about .text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 50px;
+}
+.about .text h1 {
+  font-weight: bold;
+  color: #96CDFB;
 }
 
-a:hover::after,
-a:focus::after {
-    transform: scale(1);
+.specs {
+  background-image: linear-gradient(#1A1826, #1E1E2E);
+  padding: 30px 80px;
+  display: flex;
+  flex-direction: column;
 }
+.specs h1 {
+  color: #F8BD96;
+  font-size: 48px;
+}
+.specs .groups {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 10px;
+  align-items: stretch;
+}
+.specs .groups .group {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  align-items: center;
+}
+.specs .groups .group img {
+  height: 20vw;
+}
+.specs .groups .group .color {
+  font-weight: bold;
+  color: #ABE9B3;
+}
+.specs .groups .group .boldbold {
+  color: #F2CDCD;
+}
+.specs .groups .group p {
+  padding: 0 20px;
+}
+.specs .groups .group-row {
+  flex-direction: row;
+}
+.specs .groups .group-reverse {
+  flex-direction: row-reverse;
+}
+
+.contact {
+  background-image: linear-gradient(#D9E0EE, #F5C2E7);
+  padding: 40px;
+  color: #1E1E2E;
+}
+.contact h1 {
+  font-weight: bold;
+  color: #1A1826;
+}
+.contact #contact {
+  padding-bottom: 30px;
+}
+.contact .contacts {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+}
+.contact .contacts .contact-list {
+  display: flex;
+  margin: 5px;
+  padding: 20px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(242, 143, 173, 0.5);
+  border-radius: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.contact .contacts .contact-list:hover {
+  border-radius: 25px;
+  background-color: #f28eac;
+}
+.contact .contacts .contact-list h4 {
+  font-weight: bold;
+  color: #6E6C7E;
+}
+
+footer {
+  background-color: #161320;
+  color: #F28FAD;
+  padding: 40px;
+}
+
+@-webkit-keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+@media screen and (max-width: 900px) {
+  .header {
+    padding: 15px;
+    font-size: 28px;
+  }
+  .header .menu {
+    display: none;
+  }
+  .header .icon::before {
+    padding: 0 12px;
+  }
+  .header .icon {
+    padding: 8px;
+  }
+
+  .notsoprofessional {
+    padding: 140px 40px;
+  }
+
+  .about {
+    flex-direction: column;
+    padding: 80px 32px;
+  }
+  .about .kitty {
+    padding-right: 0;
+    padding-bottom: 350px;
+  }
+  .about p {
+    font-size: 28px;
+  }
+
+  .specs {
+    padding: 30px;
+  }
+  .specs .group {
+    flex-direction: column-reverse !important;
+  }
+  .specs .group:not(figure) {
+    align-items: stretch !important;
+  }
+
+  figure {
+    margin: 0;
+  }
+
+  img {
+    height: 45vw !important;
+  }
+}
+figcaption {
+  font-size: 10px;
+  color: #C3BAC6;
+  font-style: italic;
+}/*# sourceMappingURL=index.css.map */

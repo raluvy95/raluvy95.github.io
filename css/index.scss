@@ -1,0 +1,306 @@
+$rosewater: #F5E0DC;
+$flamingo: #F2CDCD;
+$mauve: #DDB6F2;
+$pink: #F5C2E7;
+$maroon: #E8A2AF;
+$red: #F28FAD;
+$peach: #F8BD96;
+$yellow: #FAE3B0;
+$green: #ABE9B3;
+$teal: #B5E8E0;
+$blue: #96CDFB;
+$sky: #89DCEB;
+$lavender: #C9CBFF;
+
+$black0: #161320;
+$black1: #1A1826;
+$black2: #1E1E2E;
+$black3: #302D41;
+$black4: #575268;
+$gray0: #6E6C7E;
+$gray1: #988BA2;
+$gray2: #C3BAC6;
+$white: #D9E0EE;
+
+$nsp-textsize: 32px;
+
+@font-face {
+    font-family: BOLD;
+    src: url(../assets/THEBOLDFONT.ttf);
+}
+
+:root {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: $black2;
+    color: $gray2;
+    accent-color: $blue;
+}
+
+@mixin colorful-bold($color) {
+    font-weight: bold;
+    color: $color;
+}
+
+body {
+    /* I wish web browsers will follow this rule*/
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $mauve;
+
+    :hover {
+        @include colorful-bold($blue);
+    }
+}
+
+.header {
+    background-color: $black1;
+    background-clip: border-box;
+    padding: 5px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    font-size: 16px;
+    transition: padding 0.8s;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+
+    .title {
+        transition: 0.6s;
+        @include colorful-bold($white);
+        font-family: BOLD;
+    }
+
+    .icon::before {
+        content: url(../assets/icon.svg);
+        padding: 0 8px;
+    }
+
+    .icon {
+        padding: 6px;
+    }
+
+    :hover {
+        color: $blue;
+    }
+
+    .menu .cols {
+        padding: 0 3px;
+    }
+}
+
+.notsoprofessional {
+    background-image: linear-gradient($blue, $black2);
+    padding: 140px 100px;
+
+    .text {
+        color: $lavender;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: $nsp-textsize;
+
+        .typing {
+            @include colorful-bold($blue);
+            border-right: .05em solid;
+            animation: caret 1s steps(1) infinite;
+        }
+    }
+}
+
+.about {
+    background-color: $black4;
+    padding: 100px 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .kitty::before {
+        content: url(../assets/cat.svg);
+    }
+
+    .kitty {
+        height: 20px;
+        padding-bottom: 250px;
+        padding-right: 80px;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-right: 50px;
+
+        h1 {
+            @include colorful-bold($blue);
+        }
+    }
+}
+
+.specs {
+    background-image: linear-gradient($black1, $black2);
+    padding: 30px 80px;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        color: $peach;
+        font-size: 48px;
+    }
+
+    .groups {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 10px;
+        align-items: stretch;
+
+        .group {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            align-items: center;
+
+            img {
+                height: 20vw;
+            }
+
+            .color {
+                @include colorful-bold($green);
+            }
+
+            .boldbold {
+                color: $flamingo;
+            }
+
+            p {
+                padding: 0 20px;
+            }
+        }
+
+        .group-row {
+            flex-direction: row;
+        }
+
+        .group-reverse {
+            flex-direction: row-reverse;
+        }
+    }
+}
+
+.contact {
+    background-image: linear-gradient($white, $pink);
+    padding: 40px;
+    color: $black2;
+
+    h1 {
+        @include colorful-bold($black1);
+    }
+    #contact {
+        padding-bottom: 30px;
+    }
+    .contacts {
+        display: flex;
+        flex-grow: 1;
+        flex-wrap: wrap;
+
+        .contact-list {
+            display: flex;
+            margin: 5px;
+            padding: 20px;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+
+            background-color: transparentize($red, 0.5);
+            border-radius: 15px;
+            transition: 0.3s;
+            cursor: pointer;
+            
+            &:hover {
+                border-radius: 25px;
+                background-color: darken($red, 0.3);
+            }
+            h4 {
+                @include colorful-bold($gray0)
+            }
+        }
+    }
+}
+
+footer {
+    background-color: $black0;
+    color: $red;
+    padding: 40px;
+}
+
+@keyframes caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .header {
+        padding: 15px;
+        font-size: 28px;
+
+        .menu {
+            display: none;
+        }
+
+        .icon::before {
+            padding: 0 12px;
+        }
+
+        .icon {
+            padding: 8px;
+        }
+    }
+
+    .notsoprofessional {
+        padding: 140px 40px;
+    }
+
+    .about {
+        flex-direction: column;
+        padding: 80px 32px;
+
+        .kitty {
+            padding-right: 0;
+            padding-bottom: 350px;
+        }
+
+        p {
+            font-size: 28px;
+        }
+    }
+
+    .specs {
+        padding: 30px;
+
+        .group {
+            flex-direction: column-reverse !important;
+        }
+        .group:not(figure) {
+            align-items: stretch !important;
+        }
+    }
+
+    figure {
+        margin: 0;
+    }
+
+    img {
+        height: 45vw !important;
+    }
+}
+
+figcaption {
+    font-size: 10px;
+    color: $gray2;
+    font-style: italic;
+}

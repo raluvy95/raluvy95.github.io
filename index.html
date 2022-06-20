@@ -5,21 +5,114 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="title" content="CatNowBlue">
-    <meta name="description" content="Basically a personal website which shows list of social media avaliable. Nothing else.">
+    <meta name="description"
+        content="Basically a personal website which shows list of social media avaliable. Nothing else.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./favicon.png">
+    <link rel="icon" href="./assets/favicon.png">
     <title>CatNowBlue</title>
     <link href="./css/index.css" type="text/css" rel="stylesheet">
     <script src="./script/index.js"></script>
+    <meta name="theme-color" content="#89DCEB">
 </head>
 
 <body>
-    <div class="fixed"></div>
-    <h1 class="title"><a href="#">CatNowBlue</a></h1>
-    <p style="text-align: center;">The most used social media by CatNowBlue <img src=https://visitor-badge.laobi.icu/badge?page_id=raluvy95.github.io /></p>
-    <ul class="list" id="active"></ul><br><br>
-    <p style="text-align: center;">Existent social media account, but rarely used</p>
-    <ul class="list" id="inactive"></ul>
+    <div class="header">
+        <span class="title">CatNowBlue</span>
+        <span class="icon"></span>
+        <div class="menu">
+            <a class="cols" href="#home">Home</a>
+            <a class="cols" href="#about">About</a>
+            <a class="cols" href="#specs">My specs</a>
+            <a class="cols" href="#contact">Contact</a>
+        </div>
+    </div>
+    <div class="notsoprofessional">
+        <div class="text" id="home">
+            <span class="not">Not so professional</span>
+            <span class="typing">Graphics Designer</span>
+        </div>
+    </div>
+    <div style="height: 150px; overflow: hidden;">
+        <svg viewBox="0 0 338.66666 60.204861" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+            <g transform="translate(-69.916665,-114.78819)">
+                <g style="display:inline" transform="translate(69.916454,16.552235)">
+                    <path style="fill:#89dceb;stroke: none"
+                        d="M 2.1108724e-4,158.44082 H 338.66688 v -31.40893 c 0,0 -32.85277,-24.97766 -51.15554,-21.93665 -17.67133,2.93611 -21.9762,35.80017 -39.88852,36.01383 -19.59539,0.23374 -25.09163,-40.55346 -44.56369,-38.34598 -7.78072,0.88207 -6.44812,16.59209 -13.92473,18.91977 -19.67273,6.12469 -37.91726,-22.193972 -58.4233,-20.18636 -15.54686,1.52208 -24.87629,24.23231 -40.484872,23.60476 C 74.981791,124.48835 67.561062,102.24378 52.664697,98.947298 35.265832,95.097022 2.1108724e-4,108.13175 2.1108724e-4,108.13175 Z" />
+                    <path style="fill:#575268;stroke: none"
+                        d="M 2.1108724e-4,158.44082 H 338.66688 v -24.97005 c 0,0 -32.85277,-24.97818 -51.15554,-21.93716 -17.67133,2.93611 -21.9762,35.80016 -39.88852,36.01382 -19.59539,0.23374 -25.09163,-40.55294 -44.56369,-38.34546 -7.78072,0.88208 -6.44812,16.5921 -13.92473,18.91977 -19.67273,6.1247 -37.91726,-22.19449 -58.4233,-20.18688 -15.54686,1.52209 -24.87629,24.23231 -40.484872,23.60476 C 74.981791,130.92671 67.561062,108.68215 52.664697,105.38566 35.265832,101.53539 2.1108724e-4,114.57063 2.1108724e-4,114.57063 Z" />
+                </g>
+            </g>
+        </svg>
+    </div>
+    <div class="about">
+        <span class="kitty"></span>
+        <div class="text">
+            <h1 id="about">About me</h1>
+            <p><b>CatNowBlue</b> <i>(formely name Raluvy95)</i> is a small YouTuber who makes videos about cat, memes
+                and other short stuff.
+                My name is also known as Redditor, Graphics Designer, Gamer, Programmer and other. I live in Romania.
+                <i>(I can speak Romanian)</i>
+                My name also has aliases: "cute cat", "catty" or "kitty".
+                I can code in Python, JavaScript (including web technology) and Lua, but I'm not really good when it
+                comes to advanced stuff.
+            </p>
+        </div>
+    </div>
+    <div style="height: 100px; overflow: hidden; background-color: #575268;">
+        <svg viewBox="0 0 338.66666 50.923359" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+            <g transform="translate(78.06771,-111.69457)">
+                <path style="display:inline;fill:#1a1826;fill-opacity:1;stroke-width:0.26508"
+                    d="m -78.06771,162.61793 h 338.66667 v -50.75039 c 0,0 -38.92595,38.82576 -64.20435,40.782 -33.89083,2.62274 -59.56898,-38.24921 -93.46665,-40.782 -43.051371,-3.21674 -82.332155,39.57344 -125.085388,33.57934 -21.529166,-3.01842 -55.910282,-33.57934 -55.910282,-33.57934 z" />
+            </g>
+        </svg>
+    </div>
+    <div class="specs">
+        <h1 id="specs">My specs</h1>
+        <div class="groups">
+            <div class="group text">
+                <p>
+                    <span class="color">Hardware</span><br>
+                    <span class="boldbold">Model:</span> Dell Latitude E6440<br>
+                    <span class="boldbold">Processor:</span> Intel Core i7 4610M<br>
+                    <span class="boldbold">Memory:</span> 16 GB RAM<br>
+                    <span class="boldbold">Graphics:</span> Intel HD Graphics 4600<br><br>
+
+                    <span class="color">Accessory</span><br>
+                    <span class="boldbold">Headphones:</span> I don't have lol<br>
+                    <span class="boldbold">Mouse:</span> Krypton 550<br>
+                    <span class="boldbold">Keyboard:</span> why do I need second keyboard when my laptop just works<br>
+                </p>
+                <p>
+                    <span class="color">Software</span><br>
+                    <span class="boldbold">OS:</span> Linux - EndeavourOS<br>
+                    <span class="boldbold">Desktop Enviorment:</span> Plasma 5.25<br>
+                    <span class="boldbold">Video Editor:</span> Kdenlive or Sony Vegas 14 (former: OpenShot)<br>
+                    <span class="boldbold">Image manipulation:</span> Photopea<br>
+                    <span class="boldbold">Illustrator/UI design:</span> Inkscape<br>
+                    <span class="boldbold">Drawing:</span> Krita (former: Paint Tool SAI)<br>
+                </p>
+            </div>
+            <div class="group">
+                <figure>
+                    <img src="./assets/Screenshot.png">
+                    <figcaption>My Desktop as of 20 June 2022</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <div style="height: 100px; overflow: hidden;">
+        <svg viewBox="0 0 338.66666 25.72711" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+            <g transform="translate(70.333335,-100.05832)">
+                <path style="display:inline;fill:#d9e0ee;fill-opacity:1;stroke-width:0.178132"
+                    d="M -70.333335,125.78543 H 268.33333 v -25.72711 c 0,0 -7.68159,15.07142 -14.98513,16.90181 -13.46067,3.37348 -25.17529,-14.90344 -39.04465,-14.44408 -16.42565,0.54402 -28.59549,19.2775 -45.0081,20.12849 -15.44802,0.80098 -28.6265,-14.36989 -44.09499,-14.46269 -15.97213,-0.0958 -29.734976,14.24381 -45.706766,14.38621 -16.12386,0.14374 -30.27403,-13.29712 -46.39355,-13.69788 -18.1172,-0.45042 -34.78346,14.2886 -52.843802,12.78527 -18.272569,-1.52099 -50.589677,-21.59713 -50.589677,-21.59713 z" />
+            </g>
+        </svg>
+    </div>
+    <div class="contact">
+        <h1 id="contact">Contact</h1>
+        <div id="contacts" class="contacts"></div>
+    </div>
+    <footer>We do not collect data and we do not use third-party cookies</footer>
 </body>
 
 </html>
