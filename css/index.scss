@@ -149,6 +149,7 @@ a {
     h1 {
         color: $peach;
         font-size: 48px;
+        text-align: center;
     }
 
     .groups {
@@ -198,6 +199,7 @@ a {
 
     h1 {
         @include colorful-bold($black1);
+        text-align: center;
     }
 
     #contact {
@@ -241,6 +243,15 @@ footer {
     background-color: $black0;
     color: $red;
     padding: 40px;
+
+    a {
+        color: $blue;
+        &:hover {
+            text-decoration: underline;
+            @include colorful-bold($sky)
+        }
+    }
+
 }
 
 @keyframes caret {

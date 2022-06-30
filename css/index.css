@@ -110,6 +110,7 @@ a :hover {
 .specs h1 {
   color: #F8BD96;
   font-size: 48px;
+  text-align: center;
 }
 .specs .groups {
   display: flex;
@@ -152,6 +153,7 @@ a :hover {
 .contact h1 {
   font-weight: bold;
   color: #1A1826;
+  text-align: center;
 }
 .contact #contact {
   padding-bottom: 30px;
@@ -189,6 +191,14 @@ footer {
   background-color: #161320;
   color: #F28FAD;
   padding: 40px;
+}
+footer a {
+  color: #96CDFB;
+}
+footer a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #89DCEB;
 }
 
 @-webkit-keyframes caret {
