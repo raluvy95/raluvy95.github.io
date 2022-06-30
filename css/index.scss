@@ -199,17 +199,22 @@ a {
     h1 {
         @include colorful-bold($black1);
     }
+
     #contact {
         padding-bottom: 30px;
     }
+
     .contacts {
         display: flex;
         flex-grow: 1;
         flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
 
         .contact-list {
             display: flex;
-            margin: 5px;
+            flex-basis: 20vw;
+            margin: 15px;
             padding: 20px;
             flex-direction: column;
             justify-content: flex-start;
@@ -219,11 +224,12 @@ a {
             border-radius: 15px;
             transition: 0.3s;
             cursor: pointer;
-            
+
             &:hover {
                 border-radius: 25px;
                 background-color: darken($red, 0.3);
             }
+
             h4 {
                 @include colorful-bold($gray0)
             }
@@ -285,8 +291,20 @@ footer {
         .group {
             flex-direction: column-reverse !important;
         }
+
         .group:not(figure) {
             align-items: stretch !important;
+        }
+    }
+
+    .contact {
+        .contacts {
+            justify-content: unset !important;
+            flex-direction: column;
+
+            .contact-list {
+                flex-basis: 0 !important;
+            }
         }
     }
 
