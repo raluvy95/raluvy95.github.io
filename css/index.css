@@ -183,8 +183,16 @@ a :hover {
   background-color: #f28eac;
 }
 .contact .contacts .contact-list h4 {
+  margin: 5px;
   font-weight: bold;
   color: #6E6C7E;
+}
+.contact .contacts .contact-list p {
+  font-size: 14px;
+}
+.contact .contacts .contact-list .logo {
+  height: 30px;
+  width: 30px;
 }
 
 footer {
@@ -259,6 +267,9 @@ footer a:hover {
   }
   .contact .contacts .contact-list {
     flex-basis: 0 !important;
+  }
+  .contact .contacts .contact-list .logo {
+    height: 30px !important;
   }
 
   figure {

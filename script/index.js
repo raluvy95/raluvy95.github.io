@@ -4,36 +4,42 @@ document.addEventListener('DOMContentLoaded', function (event) {
   const data = [
       {
         name: "YouTube",
+        icon: "yt",
         username: "CatNowBlue",
         description: "This is where CatNowBlue was born.",
         url: "https://youtube.com/catnowblue"
       },
       {
         name: "GitHub",
+        icon: "gh",
         username: "raluvy95",
         description: "The site where I share my source code!",
         url: "https://github.com/raluvy95"
       },
       {
         name: "Discord",
+        icon: "ds",
         username: "catnowblue",
         description: "The most common way to communicate with our community",
         url: "https://discord.gg/3CVqX5bphG"
       },
       {
         name: "Instagram",
+        icon: "ig",
         username: "catnowblue.ro",
         description: "Another way to communicate with me, but not often.",
         url: "https://instagram.com/catnowblue.ro"
       },
       {
         name: "Reddit",
+        icon: "re",
         username: "therealraluvy95",
         description: "Where I collect memes and maybe I will post there",
         url: "https://reddit.com/u/therealraluvy95"
       },
       {
         name: "TikTok",
+        icon: "tt",
         username: "catnowblue.ro",
         description: "The newest social media, tho I post short video there",
         url: "https://www.tiktok.com/@catnowblue.ro"
@@ -67,7 +73,12 @@ document.addEventListener('DOMContentLoaded', function (event) {
   StartTextAnimation(0);
   for (const it of data) {
     document.getElementById("contacts").innerHTML += `
-    <div class="contact-list" url="${it.url}" onclick="openURL(event);"><h2>${it.name}</h2><h4>@${it.username}</h4><p>${it.description}</p></div>`
+    <div class="contact-list" url="${it.url}" onclick="openURL(event);">
+      <img class="logo" src="./assets/icons/${it.icon}.png">
+      <h2>${it.name}</h2>
+      <h4>@${it.username}</h4>
+      <p>${it.description}</p>
+    </div>`
   }
 
 });

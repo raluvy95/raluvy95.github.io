@@ -233,7 +233,17 @@ a {
             }
 
             h4 {
+                margin: 5px;
                 @include colorful-bold($gray0)
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            .logo {
+                height: 30px;
+                width: 30px;
             }
         }
     }
@@ -246,6 +256,7 @@ footer {
 
     a {
         color: $blue;
+
         &:hover {
             text-decoration: underline;
             @include colorful-bold($sky)
@@ -315,6 +326,10 @@ footer {
 
             .contact-list {
                 flex-basis: 0 !important;
+
+                .logo {
+                    height: 30px !important;
+                }
             }
         }
     }
