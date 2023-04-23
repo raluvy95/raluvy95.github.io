@@ -57,7 +57,7 @@
             </p>
             <p>
                 I like drawing and playing video games, tho I'm not really good
-                at this. My pronoun is She/her and I'm straight. I currently
+                at this. My pronoun is she/her and I'm straight. I currently
                 working on my discord bot and websites built with Svelte (React
                 soon for big project ig).
             </p>
@@ -135,7 +135,7 @@
         height: 100%;
 
         p:not(span) {
-            margin: 10px 60px;
+            margin: 0 60px;
         }
     }
 
@@ -170,7 +170,7 @@
         top: 0;
 
         .child {
-            padding: 2px 10px;
+            padding: 0 10px;
             margin: 0;
 
             &:hover {
