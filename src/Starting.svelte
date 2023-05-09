@@ -25,7 +25,7 @@ Color Support: <span style="color: red;">Y</span><span style="color: yellow;">E<
 Reading the configuration file
 Checking for new update
 
-You are using version 23.04!
+You are using version 23.05!
 
 Optimizing...
 

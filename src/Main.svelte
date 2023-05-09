@@ -87,6 +87,15 @@
                         >Reddit</a
                     > to post funny memes.
                 </div>
+                <h1>Pages</h1>
+                <ul style="list-style-type:disc">
+                    <li>
+                        <a href="/svelte-web">Template Svelte</a>
+                    </li>
+                    <il>
+                        <a href="/cps-counter">CPS Counter</a>
+                    </il>
+                </ul>
             </div>
         </div>
         <pre class="ascii mustshowascii">
@@ -105,7 +114,13 @@
              ; '   : :`-:     _.`* ;
            .*' /  .*' ; .*`- +'  `*' 
            `*-*   `*-*  `*-*'
-                   </pre>
+        </pre>
+        <footer>
+            This website is <a
+                href="https://github.com/raluvy95/raluvy95.github.io"
+                >open-source</a
+            >
+        </footer>
     </div>
 {:else}
     <h1>You just crashed :(</h1>
@@ -222,10 +237,27 @@
 
         a {
             color: violet;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            &:visited {
+                color: purple;
+            }
         }
 
         div {
             margin: 20px 0;
+        }
+    }
+
+    footer {
+        text-align: center;
+        margin: 10px;
+
+        a {
+            color: orange;
         }
     }
     @keyframes spinning {
