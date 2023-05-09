@@ -90,10 +90,14 @@
                 <h1>Pages</h1>
                 <ul style="list-style-type:disc">
                     <li>
-                        <a href="/svelte-web">Template Svelte</a>
+                        <a href="/svelte-web" target="_blank" rel="noreferrer"
+                            >Template Svelte</a
+                        >
                     </li>
                     <il>
-                        <a href="/cps-counter">CPS Counter</a>
+                        <a href="/cps-counter" target="_blank" rel="noreferrer"
+                            >CPS Counter</a
+                        >
                     </il>
                 </ul>
             </div>
