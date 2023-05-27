@@ -87,6 +87,9 @@
                         >Reddit</a
                     > to post funny memes.
                 </div>
+                <div>
+                    Check out my <a href="https://linux-hardware.org/?probe=821e3e3246">specs!</a>
+                </div>
                 <h1>Pages</h1>
                 <ul style="list-style-type:disc">
                     <li>
