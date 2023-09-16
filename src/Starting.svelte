@@ -25,11 +25,9 @@ Color Support: <span style="color: red;">Y</span><span style="color: yellow;">E<
 Reading the configuration file
 Checking for new update
 
-You are using version 23.05!
+You are using version 23.09!
 
-Optimizing...
-
-Welcome to the website!
+This site will have UI upgrade by 2024!
     `;
 
     let loading = "Loading";
