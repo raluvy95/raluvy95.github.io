@@ -130,7 +130,7 @@
 
                 a {
                     text-decoration: none;
-                    font-family: NerdFonts, "monospace";
+                    font-family: "Fira Code", "monospace";
                     font-size: 80px;
                     border-radius: 15px;
                     background-color: p.$base;
