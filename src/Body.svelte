@@ -1,0 +1,192 @@
+<script lang="ts">
+    import { yearsOld, timeFormat } from "./time";
+
+    let seconds: number = 0;
+    let title = "Welcome to CatNowBlue's website!";
+
+    const myAge = yearsOld(Date.now(), Date.parse("18 Jan 2005 00:00:00 GMT"));
+
+    function titleHover() {
+        title = "I am a cute cat :3";
+    }
+
+    function titleOut() {
+        title = "Welcome to CatNowBlue's website!";
+    }
+
+    setInterval(() => {
+        seconds++;
+    }, 1000);
+</script>
+
+<div class="main">
+    <h1
+        class="title"
+        on:mouseover={titleHover}
+        on:focus={titleHover}
+        on:mouseleave={titleOut}
+    >
+        {title}
+    </h1>
+    <div class="info">
+        <pre>
+ ╱|、
+(˚ˎ 。7
+ |、˜〵 
+ じしˍ,)ノ</pre>
+        <p>
+            󰄛 CNB, Cat or Catty<br />
+            󰊜 she/her<br />
+             {myAge}<br />
+             Europe • Romania <br />
+            =================== <br />
+             Latitude E6440<br />
+             i7-4610M (4) @ 3.7GHz<br />
+            󰍛 16 GB<br />
+             {timeFormat(seconds)}<br />
+            =================== <br />
+             Arch Linux x86_64<br />
+             6.1-lts<br />
+             zsh<br />
+             Plasma<br />
+        </p>
+    </div>
+    <div class="links">
+        <h1>Links</h1>
+        <div class="btns">
+            <a href="https://youtube.com/@catnowblue">󰗃</a>
+            <a href="https://discord.gg/BK57NZ8vTX">󰙯</a>
+            <a href="https://instagram.com/catnowblue.ro"></a>
+            <a href="https://github.com/raluvy95"></a>
+        </div>
+    </div>
+    <footer>
+        This page is <a href="https://github.com/raluvy95/raluvy95.github.io"
+            >open source</a
+        >
+    </footer>
+</div>
+
+<style lang="scss">
+    @use "style/palette.scss" as p;
+
+    .main {
+        background-color: p.$crust;
+        position: absolute;
+        z-index: 2;
+        width: 95%;
+        top: 54vh;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 25px;
+        backdrop-filter: blur(5px) contrast(0.8);
+        opacity: 95%;
+        margin-bottom: 20px;
+
+        .title {
+            font-size: 5vh;
+            text-align: center;
+            background: linear-gradient(90deg, p.$mauve 40%, p.$sapphire 80%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .info {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-content: space-evenly;
+            align-items: center;
+            padding: 30px 0;
+            background: linear-gradient(0deg, p.$mauve 40%, p.$sapphire 80%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            pre {
+                color: p.$text;
+                font-size: 3vw;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+        .links {
+            h1 {
+                text-align: center;
+                background: linear-gradient(
+                    90deg,
+                    p.$sapphire 40%,
+                    p.$mauve 80%
+                );
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .btns {
+                display: flex;
+                justify-content: space-evenly;
+
+                a {
+                    text-decoration: none;
+                    font-family: NerdFonts, "monospace";
+                    font-size: 80px;
+                    border-radius: 15px;
+                    background-color: p.$base;
+                    padding: 0 25px;
+                    transition: 0.3s;
+                    color: p.$mauve;
+                    border: solid p.$mauve;
+                    border-top-width: 3px;
+                    &:hover {
+                        background-color: p.$mauve;
+                        cursor: pointer;
+                        border: none;
+                        color: p.$crust;
+                        border: solid p.$crust;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        text-align: center;
+        margin: 20px;
+
+        a {
+            text-decoration: none;
+            color: p.$mauve;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .main {
+            border-radius: 0;
+            width: 100%;
+            height: 100%;
+            top: 50vh;
+            padding-left: 10%;
+            padding-right: 20px;
+        }
+
+        .title {
+            padding-top: 48px;
+        }
+
+        .btns {
+            padding-bottom: 10%;
+            a {
+                font-size: 48px !important;
+                padding: 0 15px !important;
+            }
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        .info pre {
+            display: none;
+        }
+    }
+</style>

@@ -1,8 +1,18 @@
 {
   "name": "raluvy95.github.io",
+  "version": "0.0.1",
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^2.4.6",
+    "@tsconfig/svelte": "^5.0.2",
+    "sass": "^1.67.0",
+    "svelte": "^4.2.1",
+    "svelte-check": "^3.5.2",
+    "svelte-preprocess": "^5.0.4",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9"
+  },
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -10,18 +20,5 @@
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "deploy": "npx gh-pages -d dist"
   },
-  "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.2",
-    "@tsconfig/svelte": "^3.0.0",
-    "sass": "^1.57.1",
-    "svelte": "^3.49.0",
-    "svelte-check": "^2.8.1",
-    "svelte-preprocess": "^4.10.7",
-    "tslib": "^2.4.0",
-    "typescript": "^4.6.4",
-    "vite": "^3.1.0"
-  },
-  "dependencies": {
-    "svelte-fast-marquee": "^0.4.1"
-  }
+  "type": "module"
 }

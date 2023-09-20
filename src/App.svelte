@@ -1,5 +1,8 @@
 <script lang="ts">
-    import Starting from "./Starting.svelte";
+    import Background from "./Background.svelte";
+    import Body from "./Body.svelte";
 </script>
 
-<Starting />
+<Background />
+
+<Body />
