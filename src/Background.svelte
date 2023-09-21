@@ -12,6 +12,8 @@
 
     let particle_cats: Array<ParticleCat> = [];
 
+    let lastMoved: number = Date.now();
+
     function randomColor(): CatColor {
         const colors: CatColor[] = ["red", "yellow", "blue", "green"];
         return colors[Math.floor(Math.random() * colors.length)];
@@ -54,8 +56,10 @@
     document
         .getElementsByTagName("body")[0]
         .addEventListener("mousemove", (ev: MouseEvent) => {
+            if (Date.now() - lastMoved <= 140) return;
             circle.y = ev.y;
             circle.x = ev.x;
+            lastMoved = Date.now();
         });
 </script>
 
