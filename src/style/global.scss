@@ -1,8 +1,12 @@
 @use "palette.scss" as p;
-@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@4/distr/fira_code.css);
+
+@font-face {
+    font-family: "Fira Code";
+    src: url("/FiraCodeNerdFontMono-Medium.ttf");
+}
 
 :root {
-    font-family: "Fira Code", monospace;
+    font-family: "Fira Code";
     color: p.$text;
 }
 
