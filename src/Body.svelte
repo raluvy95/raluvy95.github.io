@@ -75,7 +75,7 @@
         position: absolute;
         z-index: 2;
         width: 95%;
-        top: 55vh;
+        top: 60%;
         left: 50%;
         transform: translate(-50%, -50%);
         border-radius: 25px;
@@ -154,6 +154,7 @@
     footer {
         text-align: center;
         margin: 20px;
+        margin-top: 100px;
 
         a {
             text-decoration: none;
@@ -162,6 +163,9 @@
     }
 
     @media screen and (max-width: 500px) {
+        :global(body) {
+            background-color: p.$crust;
+        }
         .main {
             border-radius: 0;
             width: 100%;
