@@ -75,7 +75,7 @@
         position: absolute;
         z-index: 2;
         width: 95%;
-        top: 54vh;
+        top: 55vh;
         left: 50%;
         transform: translate(-50%, -50%);
         border-radius: 25px;
@@ -137,14 +137,14 @@
                     padding: 0 25px;
                     transition: 0.3s;
                     color: p.$mauve;
-                    border: solid p.$mauve;
+                    box-shadow: 0 0 15px p.$mauve;
                     border-top-width: 3px;
                     &:hover {
                         background-color: p.$mauve;
                         cursor: pointer;
                         border: none;
+                        box-shadow: none;
                         color: p.$crust;
-                        border: solid p.$crust;
                     }
                 }
             }
