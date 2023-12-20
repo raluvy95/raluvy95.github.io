@@ -40,13 +40,14 @@
              {myAge}<br />
              Europe • Romania <br />
             =================== <br />
-             Latitude E6440<br />
-             i7-4610M (4) @ 3.7GHz<br />
-            󰍛 16 GB<br />
+             ASUS TUF Gaming F15<br />
+             i7-11800H (16) @ 4.6GHz<br />
+            󰍛 16 GB RAM<br />
+            󰍛 NVIDIA GeForce RTX 3050 Ti<br />
              {timeFormat(seconds)}<br />
             =================== <br />
-             Arch Linux x86_64<br />
-             6.1-lts<br />
+             EndeavourOS x86_64<br />
+             6.6<br />
              zsh<br />
              Plasma<br />
         </p>
