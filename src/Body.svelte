@@ -46,10 +46,10 @@
             󰍛 NVIDIA GeForce RTX 3050 Ti<br />
              {timeFormat(seconds)}<br />
             =================== <br />
-             EndeavourOS x86_64<br />
-             6.6<br />
+             NixOS<br />
+             6.1<br />
              zsh<br />
-             Plasma<br />
+             GNOME<br />
         </p>
     </div>
     <div class="links">
