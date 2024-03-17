@@ -35,21 +35,23 @@
  |、˜〵 
  じしˍ,)ノ</pre>
         <p>
-            󰄛 CNB, Cat or Catty<br />
-            󰊜 she/her<br />
-             {myAge}<br />
-             Europe • Romania <br />
+            <span class="icon">󰄛</span> CNB, Cat or Catty<br />
+            <span class="icon">󰊜</span> she/her<br />
+            <span class="icon"></span>
+            {myAge}<br />
+            <span class="icon"></span> Europe • Romania <br />
             =================== <br />
-             ASUS TUF Gaming F15<br />
-             i7-11800H (16) @ 4.6GHz<br />
-            󰍛 16 GB RAM<br />
-            󰍛 NVIDIA GeForce RTX 3050 Ti<br />
-             {timeFormat(seconds)}<br />
+            <span class="icon"></span> ASUS TUF Gaming F15<br />
+            <span class="icon"></span> i7-11800H (16) @ 4.6GHz<br />
+            <span class="icon">󰍛</span> 16 GB RAM<br />
+            <span class="icon">󰍛</span> NVIDIA GeForce RTX 3050 Ti<br />
+            <span class="icon"></span>
+            {timeFormat(seconds)}<br />
             =================== <br />
-             NixOS<br />
-             6.1<br />
-             zsh<br />
-             GNOME<br />
+            <span class="icon"></span> NixOS<br />
+            <span class="icon"></span> 6.1<br />
+            <span class="icon"></span> zsh<br />
+            <span class="icon"></span> GNOME<br />
         </p>
     </div>
     <div class="links">
@@ -57,6 +59,7 @@
         <div class="btns">
             <a href="https://youtube.com/@catnowblue">󰗃</a>
             <a href="https://discord.gg/BK57NZ8vTX">󰙯</a>
+            <a href="https://techhub.social/@catnowblue">󰫑</a>
             <a href="https://instagram.com/catnowblue.ro"></a>
             <a href="https://github.com/raluvy95"></a>
         </div>
@@ -103,6 +106,7 @@
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
+            font-family: "Fira Code";
 
             pre {
                 color: p.$text;
@@ -110,6 +114,10 @@
             }
             p {
                 font-size: 16px;
+            }
+
+            .icon {
+                font-size: 28px;
             }
         }
         .links {
