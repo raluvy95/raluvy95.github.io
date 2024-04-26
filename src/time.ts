@@ -1,11 +1,11 @@
 export function yearsOld(current: number, previous: number) {
 
-    var msPerMinute = 60 * 1000;
-    var msPerHour = msPerMinute * 60;
-    var msPerDay = msPerHour * 24;
-    var msPerYear = msPerDay * 365.242375; // with leap day
+    const msPerMinute = 60 * 1000;
+    const msPerHour = msPerMinute * 60;
+    const msPerDay = msPerHour * 24;
+    const msPerYear = msPerDay * 365.242375; // with leap day
 
-    var elapsed = current - previous;
+    const elapsed = current - previous;
 
     return Math.floor(elapsed / msPerYear) + ' years old';
 

@@ -1,205 +1,135 @@
 <script lang="ts">
     import { yearsOld, timeFormat } from "./time";
-
+    import { cats } from "./catascii";
+    import Cursor from "./Cursor.svelte";
     let seconds: number = 0;
-    let title = "Welcome to CatNowBlue's website!";
 
     const myAge = yearsOld(Date.now(), Date.parse("18 Jan 2005 00:00:00 GMT"));
-
-    function titleHover() {
-        title = "I am a cute cat :3";
-    }
-
-    function titleOut() {
-        title = "Welcome to CatNowBlue's website!";
-    }
-
+    const randomCat = cats[Math.floor(Math.random() * cats.length)];
     setInterval(() => {
         seconds++;
     }, 1000);
+
+    const prompt = "cnb@kitty$ ";
 </script>
 
 <div class="main">
-    <h1
-        class="title"
-        on:mouseover={titleHover}
-        on:focus={titleHover}
-        on:mouseleave={titleOut}
-    >
-        {title}
-    </h1>
-    <div class="info">
-        <pre>
- ╱|、
-(˚ˎ 。7
- |、˜〵 
- じしˍ,)ノ</pre>
-        <p>
-            <span class="icon">󰄛</span> CNB, Cat or Catty<br />
-            <span class="icon">󰊜</span> she/her<br />
-            <span class="icon"></span>
-            {myAge}<br />
-            <span class="icon"></span> Europe • Romania <br />
-            =================== <br />
-            <span class="icon"></span> ASUS TUF Gaming F15<br />
-            <span class="icon"></span> i7-11800H (16) @ 4.6GHz<br />
-            <span class="icon">󰍛</span> 16 GB RAM<br />
-            <span class="icon">󰍛</span> NVIDIA GeForce RTX 3050 Ti<br />
-            <span class="icon"></span>
-            {timeFormat(seconds)}<br />
-            =================== <br />
-            <span class="icon"></span> NixOS<br />
-            <span class="icon"></span> 6.1<br />
-            <span class="icon"></span> zsh<br />
-            <span class="icon"></span> GNOME<br />
-        </p>
-    </div>
-    <div class="links">
-        <h1>Links</h1>
-        <div class="btns">
-            <a href="https://youtube.com/@catnowblue">󰗃</a>
-            <a href="https://discord.gg/BK57NZ8vTX">󰙯</a>
-            <a href="https://techhub.social/@catnowblue">󰫑</a>
-            <a href="https://instagram.com/catnowblue.ro"></a>
-            <a href="https://github.com/raluvy95"></a>
+    <article>
+        <div class="welcomeMessage">
+            Welcome to https://raluvy95.github.io!<br />
+            This is CatNowBlue's personal website.<br />
+            By the way, this page is
+            <a
+                href="https://github.com/raluvy95/raluvy95.github.io"
+                target="_blank">open source</a
+            >
         </div>
-    </div>
-    <footer>
-        This page is <a href="https://github.com/raluvy95/raluvy95.github.io"
-            >open source</a
-        >
-    </footer>
+        <div class="prompt">
+            {prompt}catfetch
+            <a class="egg" href="https://i.imgur.com/ArXAMiN.png">--meow</a>
+        </div>
+        <div class="neofetch">
+            <div class="kitty">
+                <a class="nFetchImage" href="https://i.imgur.com/A1gZqtK.png"
+                    >{randomCat}</a
+                >
+            </div>
+            <div class="info">
+                󰄛 CatNowblue, cutecat, CNB<br />
+                󰊜 she/her<br />
+                 Europe, Romania<br />
+                 {myAge}<br />
+                <hr />
+                 ASUS TUF Gaming F15<br />
+                 i7-11800H (16) @ 4.6GHz<br />
+                󰍛 16 GB RAM<br />
+                󰍛 NVIDIA GeForce RTX 3050 Ti<br />
+                 {timeFormat(seconds)}<br />
+                <hr />
+                 NixOS<br />
+                 6.1<br />
+                 zsh<br />
+                 GNOME<br />
+                <hr />
+                <a class="egg" href="https://i.imgur.com/9N26ALo.png">󰪯 egg</a>
+            </div>
+        </div>
+        <div class="prompt">{prompt}cat links.txt</div>
+        <div class="links">
+            <a href="https://youtube.com/@catnowblue"> Youtube</a>
+            <a href="https://github.com/raluvy95"> Github</a>
+            <a href="https://instagram.com/catnowblue.ro"> Instagram</a>
+            <a href="https://techhub.social/@catnowblue">󰫑 Mastodon</a>
+            <a href="https://discord.gg/BK57NZ8vTX">󰙯 Discord</a>
+        </div>
+        <div class="prompt">
+            {prompt}dd if=/dev/zero of=/dev/sda1<Cursor />
+        </div>
+    </article>
 </div>
 
 <style lang="scss">
-    @use "style/palette.scss" as p;
+    @use "./style/palette.scss" as p;
+
+    .egg {
+        text-decoration: none;
+    }
 
     .main {
-        background-color: p.$crust;
-        position: absolute;
-        z-index: 2;
-        width: 95%;
-        top: 60%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border-radius: 25px;
-        backdrop-filter: blur(5px) contrast(0.8);
-        opacity: 95%;
-        margin-bottom: 20px;
+    }
 
-        .title {
-            font-size: 5vh;
-            text-align: center;
-            background: linear-gradient(90deg, p.$mauve 40%, p.$sapphire 80%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+    article {
+        border-width: 3px;
+        border-style: solid;
+        border-color: p.$foreground;
+        border-radius: 15px;
+        align-items: left;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        height: 100%;
+        flex-grow: 1;
+    }
+
+    .neofetch {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .kitty {
+        font-family: "Fira Code";
+        font-size: 2.5rem;
+        height: 17rem;
+        width: 17rem;
+        margin: 1rem;
+        margin-right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .nFetchImage {
+            margin: 0px;
+            line-height: 1.3;
+            text-decoration: none;
         }
-        .info {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-content: space-evenly;
-            align-items: center;
-            padding: 30px 0;
-            background: linear-gradient(0deg, p.$mauve 40%, p.$sapphire 80%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-family: "Fira Code";
+    }
 
-            pre {
-                color: p.$text;
-                font-size: 3vw;
-            }
-            p {
-                font-size: 16px;
-            }
-
-            .icon {
-                font-size: 28px;
-            }
-        }
-        .links {
-            h1 {
-                text-align: center;
-                background: linear-gradient(
-                    90deg,
-                    p.$sapphire 40%,
-                    p.$mauve 80%
-                );
-                -webkit-background-clip: text;
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
-
-            .btns {
-                display: flex;
-                justify-content: space-evenly;
-
-                a {
-                    text-decoration: none;
-                    font-family: "Fira Code", "monospace";
-                    font-size: 80px;
-                    border-radius: 15px;
-                    background-color: p.$base;
-                    padding: 0 25px;
-                    transition: 0.3s;
-                    color: p.$mauve;
-                    box-shadow: 0 0 15px p.$mauve;
-                    border-top-width: 3px;
-                    &:hover {
-                        background-color: p.$mauve;
-                        cursor: pointer;
-                        border: none;
-                        box-shadow: none;
-                        color: p.$crust;
-                    }
-                }
-            }
+    .links {
+        font-size: 1rem;
+        display: flex;
+        flex-direction: column;
+        a {
+            width: fit-content;
         }
     }
 
     footer {
         text-align: center;
-        margin: 20px;
-        margin-top: 100px;
-
-        a {
-            text-decoration: none;
-            color: p.$mauve;
-        }
+        margin: 5px;
     }
 
-    @media screen and (max-width: 500px) {
-        :global(body) {
-            background-color: p.$crust;
-        }
-        .main {
-            border-radius: 0;
-            width: 100%;
-            height: 100%;
-            top: 50vh;
-            padding-left: 10%;
-            padding-right: 20px;
-        }
-
-        .title {
-            padding-top: 48px;
-        }
-
-        .btns {
-            padding-bottom: 10%;
-            a {
-                font-size: 48px !important;
-                padding: 0 15px !important;
-            }
-        }
-    }
-
-    @media screen and (max-width: 400px) {
-        .info pre {
-            display: none;
-        }
+    hr {
+        color: p.$foreground;
     }
 </style>

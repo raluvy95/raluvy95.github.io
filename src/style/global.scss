@@ -7,57 +7,20 @@
 
 :root {
     font-family: "Fira Code";
-    color: p.$text;
-}
-
-@mixin red-filter {
-    filter: invert(86%) sepia(10%) saturate(5109%) hue-rotate(292deg) brightness(95%) contrast(100%);
-}
-
-@mixin blue-filter {
-    filter: invert(82%) sepia(4%) saturate(6724%) hue-rotate(168deg) brightness(97%) contrast(89%);
-}
-
-@mixin yellow-filter {
-    filter: invert(92%) sepia(71%) saturate(390%) hue-rotate(316deg) brightness(99%) contrast(97%);
-}
-
-@mixin green-filter {
-    filter: invert(93%) sepia(2%) saturate(6297%) hue-rotate(58deg) brightness(99%) contrast(80%);
+    color: p.$foreground;
 }
 
 
 body {
-    background-color: p.$base;
+    background-color: p.$background;
     overflow-x: hidden;
 }
 
-.cat-icon {
-    &.red {
-        @include red-filter();
-    }
+a {
+    color: p.$foreground;
+}
 
-    &.blue {
-        @include blue-filter();
-    }
-
-    &.yellow {
-        @include yellow-filter();
-    }
-
-    &.green {
-        @include green-filter();
-    }
-
-    &.small {
-        height: 3vh;
-    }
-
-    &.medium {
-        height: 4vh;
-    }
-
-    &.big {
-        height: 5vh;
-    }
+a:visited {
+    color: p.$foreground;
+    text-decoration: wavy;
 }
