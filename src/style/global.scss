@@ -1,5 +1,3 @@
-@use "palette.scss" as p;
-
 @font-face {
     font-family: "Fira Code";
     src: url("/FiraCodeNerdFontMono-Medium.ttf");
@@ -7,20 +5,23 @@
 
 :root {
     font-family: "Fira Code";
-    color: p.$foreground;
+    color: var(--foreground);
+    --foreground: #caf7ff;
+    --background: #000;
+    --secondary: #70C9D9;
 }
 
 
 body {
-    background-color: p.$background;
+    background-color: var(--background);
     overflow-x: hidden;
 }
 
 a {
-    color: p.$foreground;
+    color: var(--foreground);
+    font-weight: bolder;
 }
 
 a:visited {
-    color: p.$foreground;
-    text-decoration: wavy;
+    color: var(--foreground);
 }
