@@ -11,6 +11,9 @@
     --secondary: #70C9D9;
 }
 
+* {
+    overflow: hidden;
+}
 
 body {
     background-color: var(--background);

@@ -3,7 +3,9 @@
     import { cats } from "./catascii";
     import Cursor from "./lib/Cursor.svelte";
     import Prompt from "./lib/Prompt.svelte";
+    import Preferences from "./lib/Preferences.svelte";
     let seconds: number = 0;
+    let showPreferences: boolean = false;
 
     const myAge = yearsOld(Date.now(), Date.parse("18 Jan 2005 00:00:00 GMT"));
     let randomCat = cats[Math.floor(Math.random() * cats.length)];
@@ -18,63 +20,78 @@
     }
 </script>
 
-<article>
-    <div class="output">
-        <div class="welcomeMessage">
-            Welcome to https://raluvy95.github.io!<br />
-            This is CatNowBlue's personal website.<br />
-            By the way, this page is
-            <a
-                href="https://github.com/raluvy95/raluvy95.github.io"
-                target="_blank">open source</a
-            >
-        </div>
-    </div>
-    <div class="prompt">
-        <Prompt>
-            catfetch <a class="egg" href="egg.png" target="_blank"> --meow </a>
-        </Prompt>
-    </div>
-    <div class="output">
-        <div class="neofetch">
-            <div class="kitty">
-                <!-- svelte-ignore a11y-click-events-have-key-events -->
-                <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-                <pre on:click={changeCat}>{cats[cats.length - 1]}</pre>
-            </div>
-            <div class="info">
-                󰄛 CatNowblue, cutecat, CNB<br />
-                󰊜 she/her<br />
-                 Europe, Romania<br />
-                 {myAge}<br />
-                <hr />
-                 ASUS TUF Gaming F15<br />
-                 i7-11800H (16) @ 4.6GHz<br />
-                󰍛 16 GB RAM<br />
-                󰍛 NVIDIA GeForce RTX 3050 Ti<br />
-                 {timeFormat(seconds)}<br />
-                <hr />
-                 NixOS<br />
-                 6.1<br />
-                 zsh<br />
-                 GNOME<br />
-                <hr />
-                <a class="egg" href="egg.png" target="_blank">󰪯 egg</a>
+<div class="main">
+    {#if showPreferences}
+        <Preferences bind:showPreferences />
+    {/if}
+    <article>
+        <div class="output">
+            <!-- svelte-ignore a11y-missing-attribute -->
+            <div class="welcomeMessage">
+                Welcome to https://raluvy95.github.io!<br />
+                This is CatNowBlue's personal website.<br />
+                By the way, this page is
+                <a
+                    href="https://github.com/raluvy95/raluvy95.github.io"
+                    target="_blank">open source</a
+                >. You can change the color of this website
+                <!-- svelte-ignore a11y-invalid-attribute -->
+                <a
+                    href="#"
+                    on:click={() => {
+                        showPreferences = true;
+                    }}>here</a
+                >.
             </div>
         </div>
-    </div>
-    <Prompt>cat links.txt</Prompt>
-    <div class="output">
-        <div class="links">
-            <a href="https://youtube.com/@catnowblue"> YouTube</a>
-            <a href="https://github.com/raluvy95"> Github</a>
-            <a href="https://instagram.com/catnowblue.ro"> Instagram</a>
-            <a href="https://techhub.social/@catnowblue">󰫑 Mastodon</a>
-            <a href="https://discord.gg/BK57NZ8vTX">󰙯 Discord</a>
+        <div class="prompt">
+            <Prompt>
+                catfetch <a class="egg" href="egg.png" target="_blank">
+                    --meow
+                </a>
+            </Prompt>
         </div>
-    </div>
-    <Prompt>dd if=/dev/zero of=/dev/sda1<Cursor /></Prompt>
-</article>
+        <div class="output">
+            <div class="neofetch">
+                <div class="kitty">
+                    <!-- svelte-ignore a11y-click-events-have-key-events -->
+                    <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+                    <pre on:click={changeCat}>{cats[cats.length - 1]}</pre>
+                </div>
+                <div class="info">
+                    󰄛 CatNowblue, cutecat, CNB<br />
+                    󰊜 she/her<br />
+                     Europe, Romania<br />
+                     {myAge}<br />
+                    <hr />
+                     ASUS TUF Gaming F15<br />
+                     i7-11800H (16) @ 4.6GHz<br />
+                    󰍛 16 GB RAM<br />
+                    󰍛 NVIDIA GeForce RTX 3050 Ti<br />
+                     {timeFormat(seconds)}<br />
+                    <hr />
+                     NixOS<br />
+                     6.1<br />
+                     zsh<br />
+                     GNOME<br />
+                    <hr />
+                    <a class="egg" href="egg.png" target="_blank">󰪯 egg</a>
+                </div>
+            </div>
+        </div>
+        <Prompt>cat links.txt</Prompt>
+        <div class="output">
+            <div class="links">
+                <a href="https://youtube.com/@catnowblue"> YouTube</a>
+                <a href="https://github.com/raluvy95"> Github</a>
+                <a href="https://instagram.com/catnowblue.ro"> Instagram</a>
+                <a href="https://techhub.social/@catnowblue">󰫑 Mastodon</a>
+                <a href="https://discord.gg/BK57NZ8vTX">󰙯 Discord</a>
+            </div>
+        </div>
+        <Prompt>dd if=/dev/zero of=/dev/sda1<Cursor /></Prompt>
+    </article>
+</div>
 
 <style lang="scss">
     .egg {
@@ -96,6 +113,8 @@
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        height: 100%;
+        flex-grow: 1;
         overflow: scroll;
         flex-grow: 1;
         position: fixed;
