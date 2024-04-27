@@ -9,7 +9,7 @@
     @keyframes blink {
         0%,
         100% {
-            opacity: 1;
+            opacity: 0.75;
         }
         50% {
             opacity: 0;

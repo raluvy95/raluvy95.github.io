@@ -1,16 +1,31 @@
 <script lang="ts">
-    const prompt = "cnb@kitty ";
+    export let prompt = "cnb@kitty ";
 </script>
 
-<div class="prompt">
-    <span class="hostname">&nbsp;{prompt} <span class="arrow"></span></span>
-    <span class="directory"> ~ <span class="arrow"></span> </span>
-    <span class="command"><slot></slot></span>
+<div class="cmd">
+    <div class="prompt">
+        <span class="hostname">
+            {prompt}
+            <span class="arrow"></span></span
+        >
+        <span class="directory">
+            ~ <span class="arrow"></span>
+        </span>
+    </div>
+    <slot></slot>
 </div>
 
 <!-- what svg, we have  kinda cool isn't it? -->
 
 <style lang="scss">
+    .cmd {
+        display: flex;
+        flex-wrap: wrap;
+        word-break: break-all;
+        margin-bottom: 1rem;
+        gap: 0.6rem;
+    }
+
     .prompt {
         display: flex;
     }
@@ -18,7 +33,7 @@
     .hostname {
         color: var(--background);
         background-color: var(--foreground);
-
+        padding-left: 1rem;
         .arrow {
             color: var(--foreground);
             background-color: var(--secondary); // good enough
@@ -33,11 +48,5 @@
             color: var(--secondary);
             background-color: var(--background);
         }
-    }
-
-    .command {
-        padding-left: 0.6rem;
-        color: var(--foreground);
-        background-color: var(--background);
     }
 </style>

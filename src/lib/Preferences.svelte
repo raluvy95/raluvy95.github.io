@@ -12,10 +12,13 @@
     let secondaryColor = styleRoot.getPropertyValue("--secondary");
     let backgroundColor = styleRoot.getPropertyValue("--background");
 
-    $: {
-        styleRoot.setProperty("--foreground", primaryColor);
-        styleRoot.setProperty("--secondary", secondaryColor);
-        styleRoot.setProperty("--background", backgroundColor);
+    window.onbeforeunload = () => {
+        saveColor();
+    };
+    function saveColor() {
+        localStorage.setItem("foreground", primaryColor);
+        localStorage.setItem("secondary", secondaryColor);
+        localStorage.setItem("background", backgroundColor);
     }
 </script>
 
@@ -27,22 +30,52 @@
         <a
             href="#"
             on:click={() => {
+                saveColor();
                 showPreferences = false;
             }}>close</a
         >
     </div>
     <div class="content">
-        <div>
+        <div class="child">
+            <!-- ngl on firefox, it just shows up the color chooser -->
+            <!-- i just want instant color -->
             <h3>Primary Color</h3>
-            <input type="color" bind:value={primaryColor} />
+            <input
+                type="color"
+                bind:value={primaryColor}
+                on:input={() => {
+                    document.documentElement.style.setProperty(
+                        "--foreground",
+                        primaryColor,
+                    );
+                }}
+            />
         </div>
-        <div>
+        <div class="child">
             <h3>Secondary Color</h3>
-            <input type="color" bind:value={secondaryColor} />
+            <input
+                type="color"
+                bind:value={secondaryColor}
+                on:input={() => {
+                    document.documentElement.style.setProperty(
+                        "--secondary",
+                        secondaryColor,
+                    );
+                }}
+            />
         </div>
-        <div>
+        <div class="child">
             <h3>Background Color</h3>
-            <input type="color" bind:value={backgroundColor} />
+            <input
+                type="color"
+                bind:value={backgroundColor}
+                on:input={() => {
+                    document.documentElement.style.setProperty(
+                        "--background",
+                        backgroundColor,
+                    );
+                }}
+            />
         </div>
     </div>
 </div>
@@ -67,6 +100,28 @@
         border-radius: 15px;
         border-width: 3px;
         border-style: solid;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+
+        .child {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+    }
+
+    input[type="color"] {
+        padding: 0;
+        border: none;
+        box-shadow: none;
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
     }
 
     @media only screen and (max-width: 1000px) {
