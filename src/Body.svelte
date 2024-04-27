@@ -101,8 +101,9 @@
         flex-direction: column;
         gap: 1rem;
         height: 100%;
-        flex-grow: 1;
-        min-height: calc(100vh - 55px);
+        flex-grow: 1;  
+        overflow: scroll;
+        height: calc(100vh - 55px);
     }
 
     .neofetch {
