@@ -1,4 +1,6 @@
 <script lang="ts">
+    import Button from "./Button.svelte";
+
     export let showPreferences: boolean = false;
 
     const root = document.querySelector(":root");
@@ -19,6 +21,26 @@
         localStorage.setItem("foreground", primaryColor);
         localStorage.setItem("secondary", secondaryColor);
         localStorage.setItem("background", backgroundColor);
+    }
+
+    function resetColor() {
+        primaryColor = "#caf7ff";
+        secondaryColor = "#70C9D9";
+        backgroundColor = "#000";
+
+        document.documentElement.style.setProperty(
+            "--foreground",
+            primaryColor,
+        );
+        document.documentElement.style.setProperty(
+            "--secondary",
+            secondaryColor,
+        );
+        document.documentElement.style.setProperty(
+            "--background",
+            backgroundColor,
+        );
+        saveColor();
     }
 </script>
 
@@ -76,6 +98,9 @@
                     );
                 }}
             />
+        </div>
+        <div class="child">
+            <Button label="Reset color" onClick={resetColor}></Button>
         </div>
     </div>
 </div>

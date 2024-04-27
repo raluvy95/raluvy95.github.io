@@ -20,5 +20,8 @@
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "deploy": "npx gh-pages -d dist"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "svelte-markdown": "^0.4.1"
+  }
 }

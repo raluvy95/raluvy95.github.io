@@ -4,6 +4,7 @@
     import Cursor from "./lib/Cursor.svelte";
     import Prompt from "./lib/Prompt.svelte";
     import Preferences from "./lib/Preferences.svelte";
+    import CommandBody from "./lib/commandBody.svelte";
 
     let prompt = "cnb@kitty";
 
@@ -86,11 +87,15 @@
             <a href="https://discord.gg/BK57NZ8vTX">󰙯 Discord</a>
         </div>
     </div>
-    <Prompt>cat message.txt</Prompt>
-    <div class="output">
-        made with love by <a href="https://github.com/raluvy95">CatNowblue</a>
-        and <a href="https://github.com/NRDsstuff">NRD</a>
-    </div>
+    <CommandBody>
+        <span slot="command">cat message.txt</span>
+        <div class="output" slot="output">
+            made with love by <a href="https://github.com/raluvy95"
+                >CatNowblue</a
+            >
+            and <a href="https://github.com/NRDsstuff">NRD</a>
+        </div>
+    </CommandBody>
     <Prompt>
         <div>dd if=/dev/zero</div>
         <div>of=/dev/sda1</div>
