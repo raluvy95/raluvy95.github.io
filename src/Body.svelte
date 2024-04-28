@@ -163,7 +163,7 @@
         color: var(--foreground);
     }
 
-    @media only screen and (max-width: 492px) {
+    @media only screen and (max-width: 650px) {
         // mobile check lol
         .neofetch {
             align-items: center;

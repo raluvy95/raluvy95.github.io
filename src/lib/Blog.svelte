@@ -26,7 +26,6 @@
     }
 
     let currentMdFile = blogFiles.length - 1;
-
     const prevBlog = () => {
         if (currentMdFile == 0) return;
         currentMdFile--;

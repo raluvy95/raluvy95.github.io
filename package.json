@@ -22,6 +22,7 @@
   },
   "type": "module",
   "dependencies": {
-    "svelte-markdown": "^0.4.1"
+    "svelte-markdown": "^0.4.1",
+    "vite-plugin-svelte-md": "^0.1.7"
   }
 }
