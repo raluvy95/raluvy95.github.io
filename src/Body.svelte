@@ -131,6 +131,30 @@
         overflow: scroll;
     }
 
+    /* width */
+    ::-webkit-scrollbar {
+        width: 6px;
+        display: hidden;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: var(--foreground);
+        border-radius: 25px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 40px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        display: show;
+        background: var(--secondary);
+    }
+
     .neofetch {
         display: flex;
         flex-direction: row;
