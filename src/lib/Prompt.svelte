@@ -1,5 +1,19 @@
 <script lang="ts">
-    export let prompt = "cnb@kitty ";
+    export let username = "cnb";
+    export let hostname = "kitty";
+    let prompt = username + "@" + hostname;
+    const re = new ResizeObserver(() => {
+        const screen = document.documentElement.clientWidth;
+        if (screen > 450) {
+            prompt = username + "@" + hostname;
+        } else if (screen < 450 && screen > 300) {
+            prompt = username;
+        } else if (screen <= 300) {
+            prompt = "";
+        }
+    });
+
+    re.observe(document.documentElement);
 </script>
 
 <div class="cmd">
