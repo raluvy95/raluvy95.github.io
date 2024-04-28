@@ -129,6 +129,7 @@
         padding: 1rem;
         padding-left: 0;
         overflow: scroll;
+        overflow-x: hidden;
     }
 
     /* width */
