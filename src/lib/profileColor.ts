@@ -47,5 +47,11 @@ export const avaliableProfileColors: ProfileColor[] = [
         primary: "#005",
         secondary: "#007",
         background: "#000"
+    },
+    {
+        name: "GNOME",
+        primary: "#fefaf3",
+        secondary: "#1e78e4",
+        background: "#1e1e1e"
     }
 ]
