@@ -1,5 +1,7 @@
 <script lang="ts">
     import Button from "./Button.svelte";
+    import ProfileColor from "./ProfileColor.svelte";
+    import { avaliableProfileColors } from "./profileColor";
 
     export let showPreferences: boolean = false;
 
@@ -57,10 +59,18 @@
             }}>close</a
         >
     </div>
+    <div class="profiles">
+        {#each avaliableProfileColors.sort( (a, b) => a.name.localeCompare(b.name), ) as p}
+            <ProfileColor
+                bind:primaryColor
+                bind:secondaryColor
+                bind:backgroundColor
+                profile={p}
+            ></ProfileColor>
+        {/each}
+    </div>
     <div class="content">
         <div class="child">
-            <!-- ngl on firefox, it just shows up the color chooser -->
-            <!-- i just want instant color -->
             <h3>Primary Color</h3>
             <input
                 type="color"
@@ -147,6 +157,14 @@
         height: 32px;
         width: 32px;
         border-radius: 50%;
+    }
+
+    .profiles {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
     }
 
     @media only screen and (max-width: 1000px) {
