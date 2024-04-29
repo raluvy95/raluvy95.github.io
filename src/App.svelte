@@ -14,7 +14,7 @@
             if (!color) return;
             document.documentElement.style.setProperty(`--${key}`, color);
         }
-        for (const e of ["foreground", "secondary", "background"]) {
+        for (const e of ["foreground", "secondary", "background", "prompt"]) {
             loadFromLocalStorage(e);
         }
     });

@@ -1,7 +1,9 @@
 <script lang="ts">
     export let username = "cnb";
     export let hostname = "kitty";
+
     let prompt = username + "@" + hostname;
+
     const re = new ResizeObserver(() => {
         const screen = document.documentElement.clientWidth;
         if (screen > 450) {
@@ -46,10 +48,10 @@
 
     .hostname {
         color: var(--background);
-        background-color: var(--foreground);
+        background-color: var(--prompt);
         padding-left: 1rem;
         .arrow {
-            color: var(--foreground);
+            color: var(--prompt);
             background-color: var(--secondary); // good enough
         }
     }

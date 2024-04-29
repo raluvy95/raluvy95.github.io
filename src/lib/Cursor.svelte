@@ -1,4 +1,8 @@
-<span class="blinking-cursor">▊</span>
+<script lang="ts">
+    export let noBlinking: boolean = false;
+</script>
+
+<span class={noBlinking ? "" : "blinking-cursor"}>▊</span>
 
 <!-- Cursor.svelte -->
 <style>

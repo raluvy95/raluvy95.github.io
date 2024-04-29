@@ -1,8 +1,8 @@
 <script lang="ts">
     import SvelteMarkdown from "svelte-markdown";
-    import CommandBody from "./commandBody.svelte";
-
+    import CommandBody from "./CommandBody.svelte";
     let date = "0";
+    let didClick: boolean = false;
 
     async function loadMarkdownFile(
         index: number,
@@ -29,27 +29,23 @@
     const prevBlog = () => {
         if (currentMdFile == 0) return;
         currentMdFile--;
+        didClick = true;
     };
 
     const nextBlog = () => {
         if (currentMdFile == blogFiles.length - 1) return;
         currentMdFile++;
+        didClick = true;
     };
 </script>
 
-<!-- we should add highlight code -->
 {#await loadMarkdownFile(currentMdFile)}
-    <CommandBody>
-        <span slot="command">glow ???.md</span>
-        <div slot="output" class="output">loading blog...</div>
+    <CommandBody command="glow ???.md" noAnimation={didClick}>
+        <div class="output">loading blog...</div>
     </CommandBody>
 {:then md}
-    <CommandBody>
-        <span slot="command">
-            glow
-            {md.date}.md
-        </span>
-        <div slot="output" class="output">
+    <CommandBody command="glow {md.date}.md" noAnimation={didClick}>
+        <div class="output">
             <button on:click={prevBlog}>◀</button>
             {currentMdFile + 1} out of {blogFiles.length}
             <button on:click={nextBlog}>▶</button>
@@ -58,9 +54,8 @@
         </div>
     </CommandBody>
 {:catch}
-    <CommandBody>
-        <span slot="command">glow ???.md</span>
-        <div slot="output" class="output">unable to load the blog...</div>
+    <CommandBody command="glow ???.md" noAnimation={didClick}>
+        <div class="output">unable to load the blog...</div>
     </CommandBody>
 {/await}
 
