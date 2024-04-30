@@ -9,7 +9,7 @@
     import { showPreferences } from "./showPreferences";
     import { fade } from "svelte/transition";
     const modules = [Welcome, CatFetch, Links, Authors, Blog, Dd];
-    let displayModules: any[] = [Welcome, Catfetch];
+    let displayModules: any[] = [Welcome, CatFetch];
     let i: number = 2;
     const s = setInterval(() => {
         if (displayModules.length == modules.length) {
