@@ -41,7 +41,7 @@
                  zsh<br />
                  GNOME<br />
                 <hr />
-                <a class="egg" href="egg.png" target="_blank">󰪯 egg</a>
+                <a class="egg" href="egg.png" target="_blank">󰪯 egg</a><br />
                 <a href="https://linux-hardware.org/?probe=021499aed9" target="_blank">My hardware probe</a>
             </div>
         </div>
