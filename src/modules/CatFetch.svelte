@@ -37,7 +37,7 @@
                  you wasted {timeFormat(seconds)}<br />
                 <hr />
                  NixOS<br />
-                 6.1<br />
+                 6.6<br />
                  zsh<br />
                  GNOME<br />
                 <hr />
