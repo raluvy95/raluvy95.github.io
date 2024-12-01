@@ -36,13 +36,16 @@
                 󰍛 NVIDIA GeForce RTX 3050 Ti<br />
                  you wasted {timeFormat(seconds)}<br />
                 <hr />
-                 NixOS<br />
-                 6.6<br />
+                 Linux Mint<br />
+                 6.8<br />
                  zsh<br />
-                 GNOME<br />
+                 Cinnamon<br />
                 <hr />
                 <a class="egg" href="egg.png" target="_blank">󰪯 egg</a><br />
-                <a href="https://linux-hardware.org/?probe=021499aed9" target="_blank">My hardware probe</a>
+                <a
+                    href="https://linux-hardware.org/?probe=eec68584ed"
+                    target="_blank">My hardware probe</a
+                >
             </div>
         </div>
     </div>
