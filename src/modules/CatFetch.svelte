@@ -36,10 +36,10 @@
                 󰍛 NVIDIA GeForce RTX 3050 Ti<br />
                  you wasted {timeFormat(seconds)}<br />
                 <hr />
-                 Linux Mint<br />
-                 6.8<br />
+                󰣇 Arch Linux<br />
+                 6.12<br />
                  zsh<br />
-                 Cinnamon<br />
+                 KDE<br />
                 <hr />
                 <a class="egg" href="egg.png" target="_blank">󰪯 egg</a><br />
                 <a
