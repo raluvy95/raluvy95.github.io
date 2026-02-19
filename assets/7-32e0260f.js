@@ -1,0 +1,30 @@
+const e=`10.05.2024
+# Education system must be reformed
+There is no reason to keep current system. Seriously.
+
+If the technology advances enough, this current system will become obsolete in near future, most likely by 2050.
+
+School is still the most common topic in the world. Every child, teen, parent, teacher and school director have heard at least few rants about school or education system in their life. Not only the rants, but also potential solutions which will benefit everyone. So far, no major reforms in school have been made.
+
+Sharing your knowledge and skill for everyone to learn is very fun, right? That's the definition of education. This is what school was meant for.
+
+Imagine a place where people have no choice but to force specific information they don't want or need in their memory. People have to follow a non-democratic and fixed program which may change for no reason (and usually the changes are completely unnecessary and/or useless). No lesson is unique at all! That must be boring right? Not to mention that useless information **must** be memorized (even if you don't actually understand it) in order to pass! 
+If you think it's some crazy education-themed prison, **you're wrong**. This is what an average school around the world looks like. Even in democratic countries like the West still have authoratian-ish public school.
+
+## My view on school
+As an adult who will finish my 11th grade in June. I see my school as a straight up prison. I'm not kidding, a lot of lessons I attended so far barely have had barely any interesing parts and basically just wasted my time listening to what my teacher said and had to write it down. On top of that, additional time was wasted due to issues not exactly related to the lesson as well as late teacher arrival. I geniunely wish my time was never wasted in school.
+
+Last year, we had a [teacher's strike](https://en.wikipedia.org/wiki/2023_Romanian_teachers%27_strike) which gave us 3 weeks of free time, just before I finished my school. It was truly amazing.
+
+## So what's the solution?
+As I said, there are so many potential solutions. The best tweaks I could make to the current system are:
+- Abolish homework entirely. Homework turns their living/leisure spaces into work spaces. We already have to go to school, so having to do more schoolwork at home does not make sense.
+- Make every lesson more interesing. I don't want to have to put subway surfers gameplay and satisfying videos next to the teacher. What I mean is make it so that children will finally enjoy it.
+- Raise education budget **(IMPORTANT!)**
+- Treat public school as first-class place, not a miserable place. Simply make school feel like it's not a prison.
+- Vote for the mayor who promises this if you are a parent or adult.
+- Make the school program more flexible and democratic.
+- Add important life lessons such as sex education, taxes and cooking.
+- Change the policy every few months to adapt/avoid new technology such as AI
+- Abolish compulsory exams. They only make student's mental health worse. Why not make projects in class?
+`;export{e as default};

@@ -1,0 +1,6 @@
+const n=`22.02.2025
+
+#I miss arch 
+
+so I went to install arch linux lol
+`;export{n as default};

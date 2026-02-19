@@ -1,0 +1,1 @@
+import{S as o,i as r,s as i,e as c,a as p,b as d,n as a,d as l}from"./index-045af4c9.js";function m(s){let t;return{c(){t=c("div"),t.innerHTML="<p>14.02.2025</p> <h1>🐈</h1> <p>🐈</p>",p(t,"class","markdown-body")},m(e,n){d(e,t,n)},p:a,i:a,o:a,d(e){e&&l(t)}}}const u={};class h extends o{constructor(t){super(),r(this,t,null,m,i,{})}}export{h as default,u as frontmatter};
