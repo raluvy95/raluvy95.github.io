@@ -1,6 +1,6 @@
 # raluvy95.github.io - [DEMO](https://raluvy95.github.io)
 
-Personal page with customizable color. Includes blogging and responsible.
+Personal page with customizable color
 
 ### Overview
 <details>
